@@ -1,0 +1,51 @@
+{
+  "compilerOptions":
+  {
+    "allowJs": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "importsNotUsedAsValues": "error",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2021",
+    "lib":
+    [
+      "es2021"
+    ],
+    "paths":
+    {
+      "@app/*": ["src/app/*"],
+      "@config/*": ["src/config/*"],
+      "@routers/*": ["src/routers/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  },
+  "ts-node":
+  {
+    "files": true
+  },
+  "include":
+  [
+    "environment.d.ts",
+    "src/**/*"
+  ],
+  "exclude":
+  [
+    "dist",
+    "node_modules"
+  ]
+}

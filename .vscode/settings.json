@@ -1,0 +1,10 @@
+{
+  "files.exclude":
+  {
+    ".vscode": true,
+    "certs": true,
+    "node_modules": true,
+    "src/logs": true,
+    "package-lock.json": true
+  }
+}
