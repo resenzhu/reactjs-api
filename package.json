@@ -12,6 +12,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "decrypt": "nodemon ./src/misc/decryptor.ts",
     "lint": "eslint . --ext .ts",
     "build": "esbuild ./src/server.ts --platform=node --bundle --minify --outfile=./dist/server.js",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
