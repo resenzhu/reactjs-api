@@ -1,3 +1,4 @@
+import type {RequestData} from 'node-mailjet/declarations/request/Request';
 import Mailjet from 'node-mailjet';
 import config from '@config/index';
 
@@ -22,7 +23,7 @@ export const sendMail = (mail: Mail): Promise<void> =>
 
     const html = mail.message.replaceAll('\n', '<br />');
 
-    const completedRequestConfig: object =
+    const completedRequestConfig: RequestData =
     {
       ...requestConfig,
       Messages:
