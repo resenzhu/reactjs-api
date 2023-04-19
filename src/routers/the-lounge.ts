@@ -300,7 +300,7 @@ const theLoungeRouter = (server: Server): void =>
                 ...existingUser,
                 status: 'online',
                 socket: socket.id,
-                modifiedDate: DateTime.utc().toISO()
+                modifiedDate: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString()
               };
 
               const updatedClientUser: ResUser =
@@ -339,8 +339,8 @@ const theLoungeRouter = (server: Server): void =>
             name: userName,
             status: 'online',
             socket: socket.id,
-            createdDate: DateTime.utc().toISO(),
-            modifiedDate: DateTime.utc().toISO()
+            createdDate: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString(),
+            modifiedDate: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString()
           };
 
           const newClientUser: ResUser =
@@ -355,7 +355,7 @@ const theLoungeRouter = (server: Server): void =>
             id: nanoid(),
             userId: newUser.id,
             activity: 'join',
-            timestamp: DateTime.utc().toISO()
+            timestamp: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString()
           };
 
           const newClientInfo: ResInfo =
@@ -688,7 +688,7 @@ const theLoungeRouter = (server: Server): void =>
           id: nanoid(),
           userId: userId,
           message: reqSendMessage.tempChat.message,
-          timestamp: DateTime.utc().toISO()
+          timestamp: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString()
         };
 
         const newClientChat: ResChat =
@@ -819,7 +819,7 @@ const theLoungeRouter = (server: Server): void =>
               ...existingUser,
               name: reqUpdateUser.user.name,
               status: reqUpdateUser.user.status,
-              modifiedDate: DateTime.utc().toISO()
+              modifiedDate: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString()
             };
 
             const updatedClientUser: ResUser =
@@ -885,7 +885,7 @@ const theLoungeRouter = (server: Server): void =>
             {
               ...existingUser,
               status: 'reconnect',
-              modifiedDate: DateTime.utc().toISO()
+              modifiedDate: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString()
             };
 
             const updatedClientUser: ResUser =
@@ -919,7 +919,7 @@ const theLoungeRouter = (server: Server): void =>
                 ...existingUser,
                 status: 'offline',
                 socket: null,
-                modifiedDate: DateTime.utc().toISO()
+                modifiedDate: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString()
               };
 
               const updatedClientUser: ResUser =
@@ -934,7 +934,7 @@ const theLoungeRouter = (server: Server): void =>
                 id: nanoid(),
                 userId: existingUser.id,
                 activity: 'leave',
-                timestamp: DateTime.utc().toISO()
+                timestamp: DateTime.utc().toISO() ?? new Date(Date.now()).toISOString()
               };
 
               const newClientInfo: ResInfo =

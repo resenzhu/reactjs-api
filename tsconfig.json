@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "5.0",
     "importsNotUsedAsValues": "error",
     "module": "commonjs",
     "moduleResolution": "node",
